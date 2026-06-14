@@ -1,0 +1,12 @@
+services:
+  laravel:
+    image: docker.io/bitnami/laravel:latest
+    entrypoint: ["/bin/bash", "-lc"]
+    command: ["sleep infinity"]
+    working_dir: /app
+    volumes:
+      - .:/app:Z
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
