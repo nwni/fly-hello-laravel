@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HealthController;
 
 Route::get('/', function () {
@@ -20,3 +21,4 @@ Route::get('/', function () {
 });
 
 Route::get('/_health', [HealthController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
